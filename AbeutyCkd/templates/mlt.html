@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ckd</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+    <script src="https://kit.fontawesome.com/f1d5beca59.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title"> MltLogin </h1>
+            <p>{{ msg }}</p>
+            <form action="{{url_for('MltLogin')}}" id="form-Id" name="myForm" method="post">
+                <div class="input-group">
+                    <div class="input-field" >
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="userName" name="nF" id="name-field" required="required">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" name="pass" id="password" required="required">
+                    </div>
+                </div>
+                <div class="btn-field">
+
+                    <button type="submit" id="mltBtn">MLT</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+
+    <!-- scribt js  -->
+    <script>
+        //let adminBtn = document.getElementById("doctorBtn")
+        let userBtn = document.getElementById("mltBtn")
+        let title = document.getElementById('title')
+        let form = document.getElementById("form-Id")
+        let tvalue;
+
+        // getting th btn value to decide form action
+        
+       
+
+        userBtn.onclick = function(){
+            // nameField.placeholder = "Mlt name";
+            title.innerHTML = "MltLogin";
+            adminBtn.classList.add("disable");
+            userBtn.classList.remove("disable");
+            tvalue = userBtn.value;           
+        }
+
+       // adminBtn.onclick = function(){
+            // nameField.placeholder = "Doctor";
+           // title.innerHTML = "login";
+           // adminBtn.classList.remove("disable");
+           // userBtn.classList.add("disable");
+           // tvalue = adminBtn.value;           
+       // }
+
+        
+       
+    </script> 
+    
+</body>
+</html>

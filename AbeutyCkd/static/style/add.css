@@ -1,0 +1,8 @@
+.container-fluid {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(207, 226, 226, 0.89),rgba(94, 95, 95, 0.644));
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}

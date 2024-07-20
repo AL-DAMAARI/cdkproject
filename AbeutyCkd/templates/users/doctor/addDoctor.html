@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ckd</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/login.css') }}">
+    
+    <script src="https://kit.fontawesome.com/f1d5beca59.js" crossorigin="anonymous"></script>
+    <style>
+        .input-group {
+            height: 250px;
+        }
+        .btn-field {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+        }
+        #btn {
+            width: 100%;
+            padding: .8rem 1.2rem;
+            background: #3c00a0;
+            color: #fff;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            margin-bottom: 1rem;
+        }
+        select {
+            width: 100%;
+            background: #eaeaea;
+            border: 0;
+            outline: 0;
+            padding: 8px 5px;
+        }
+    </style>
+</head>
+<body>
+     
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Doctor Regestration</h1>
+            <p>{{ msg }}</p>
+            <form action="{{addDoctor_page}}" id="form-Id" name="myForm" method="post">
+                <div class="input-group">
+                    <div class="input-field" >
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name" name="dName" id="name-field">
+                    </div>
+                    <select name="sex" id="sex">
+                        <option value="male" aria-placeholder="choose gender">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" name="E-mail" placeholder="E-mail">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button id="btn" type="submit"> Submit </button>
+                    <p><a href="{{url_for('admin_page')}}">Back</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- scribt js  -->
+    
+</body>
+</html>
